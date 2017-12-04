@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding: 0;
+}
+nav{
+}
+.navbar-inverse{
+    border:none;
+    background-color:#2c3e50 ;
+    margin: 0;
+}
+
+#navbar>.navbar-nav>li>a, .navbar-header>.navbar-brand{
+    color: white;
+}
+#sign-btn{
+}
+
+/*.....................................................................................................*/
+.heading{
+    background-color:#2c3e50 ;
+
+}
+.inner-home{
+    padding-top: 10vh;
+    text-align: left;
+    height: 45vh;
+    color: white;
+
+}
+.contents{
+    padding-top: 5vh;
+}
+h2,
+h3,
+h4,.about,.mid-footer-ul>li>h5{
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.btn{
+    margin: 2px;
+}
+
+.sign-up-link{
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+.what-we-do{
+    padding-top: 10vh;
+}
+.table>thead{
+    background-color: darkslategrey;
+    color: white;
+}
+.blog-footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding:3vh 0;
+    text-align: center;
+   /*#f5f5f5 /* #D5D4D2;#555555*/ ;
+
+}
+.blog-footer>p>a{
+    color: dodgerblue;
+}
+.blog-footer p:last-child {
+    margin-bottom: 0;
+}
+.table>tbody{
+      padding: 2vh;
+
+}
+#meta-price-info{
+    position: relative;
+}
+#contact_form{
+    float: none;
+    margin: 10vh auto;
+}

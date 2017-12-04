@@ -1,0 +1,22 @@
+{% extends "popeye/base.html" %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'popeye/login.css' %}" />
+{% endblock extra_head %}
+{% block content %}
+    <div class="col-lg-4">
+    {% if user.is_authenticated %}
+        {{ user.id }}
+    {% endif %}
+<form method="post" action="{% url 'form' %}">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit" class="btn btn-primary">submit</button>
+     {% if form.errors %}
+            {% for fields in form %}
+            {{ fields.errors }}
+            {% endfor %}
+        {% endif %}
+</form>
+    </div>
+{% endblock %}

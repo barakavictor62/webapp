@@ -1,0 +1,64 @@
+{% extends 'popeye/base.html' %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="static/popeye/about.css" />
+{% endblock extra_head %}
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container contain-nav">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="/"><h4>Ace  Digital</h4></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="go-gray"><a href="/pricing"><h4>Pricing</h4></a></li>
+                <li class="go-gray"><a href="/pricing"><h4>Request Content</h4></a></li>
+                <li class="go-gray"><a href="/pricing"><h4>Request Website</h4></a></li>
+                <li class="go-gray"><a href="http://localhost/wordpress"><h4>Blog</h4></a></li>
+                <li class="go-gray"><a href="/contact" id="contactLink"><h4>Contact Us</h4></a></li>
+                <li class="go-gray"><a href="/login"><h4>Sign In</h4></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7" id="contact_form">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Contact Us</h3>
+                        <form method="post">
+                            <label for="user_email"></label>
+                            <input type="email" class="form-control" placeholder="Enter your email" id="user_email">
+                            <label for="user_message"></label>
+                            <textarea rows="10" class="form-control" placeholder="write your message">
+
+                            </textarea>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <footer class="blog-footer">
+                <p class=""><a href="#">Privacy</a> . <a href="#">Terms</a>.</p>
+                <p>
+                <p class="">&copy; 2016 Ace, Inc.</p>
+                </p>
+            </footer>
+        </div>
+    </div>
+{% endblock content %}
+{% block scripts %}
+    <script  type="text/javascript" src="{% static 'popeye/js/js/pricing.js' %}"></script>
+{% endblock %}

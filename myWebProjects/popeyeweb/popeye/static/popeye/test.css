@@ -1,0 +1,190 @@
+.navbar-inverse{
+    background-color: #2c3e50;
+    border: none;
+
+}
+#navbar>.navbar-nav>li>a, .navbar-header>.navbar-brand{
+    color: white;
+}
+.logo{
+    font-family: "Lucida Handwriting";
+
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.53);
+    display: none;
+}
+.main{
+     padding: 40px;
+}
+#menu-toggle{
+    z-index: 5000;
+    color: #fff;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top:15vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #3498db;
+
+}
+#menu-toggle{
+    margin-right: 3vh;
+}
+#menu-toggle {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-right: 3vh;
+}
+.main {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 15vh;
+}
+@media (min-width: 768px) {
+
+    .profile-text {
+        position: relative;
+        top: 12vh;
+
+    }
+    .sidebar{
+         display: block;
+    }
+}
+
+.btn-link{
+    color: white;
+    border: none;
+}
+.sidebar-nav{
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+.sidebar>button{
+    margin-bottom: 2vh;
+}
+.sidebar-nav li{
+    text-indent: 10px;
+    margin-bottom: 2vh;
+    line-height: 40px;
+}
+.sidebar-nav li a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+.sidebar-nav li a:hover{
+    color: #fff;
+}
+
+.profile-text>h4,h3, .sidebar-nav>li a, #dynamic-data>ul>li a{
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.image-holder {
+    margin: 2vh;
+    height: 40vh;
+    border-radius: 50%;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.profbody{
+    min-height:30vh;
+    background-color: white;
+
+}
+.my-articles,.pending,.done{
+    min-height: 35vh;
+}
+.pending, .done{
+    display:none;
+}
+.options-holder {
+    position: relative;
+    top: 10%;
+    float: none;
+    margin: 0 auto;
+    min-height: 70%;
+}
+.hold-form,.webDesign{
+    display: none;
+}
+.ui-dialog {
+    z-index: 3000 !important;
+}
+.ui-dialog-titlebar{
+    background-color: #337ab7;
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
+.blog-footer {
+    margin-top: 2vh;
+    padding: 40px 0;
+    color: #999;
+    text-align: center;
+    background-color: #0f0f0f;
+    border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+
+#wrapper{
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+#wrapper.menuDisplayed .sidebar{
+    display: none;
+}
+#wrapper.menuDisplayed .main{
+    float: none;
+    margin: 0 auto;
+}
+#logout-btn{
+    margin:1vh 2vh 2vh 2vh;
+}
+.choose{
+    margin-bottom: 2vh;
+}
+#dynamic-data{
+    position: relative;
+    top:5vh;
+
+}
+.article-panel-holder{
+    float: none;
+    margin: 0 auto;
+}
+#password-change{
+    display: none;
+}
+.article-holder:hover{
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 gray;
+}
+.description{
+    height:20vh ;
+    overflow-y: hidden;
+}
+#request-details{
+    float: none;
+    margin: 0 auto;
+}
+.link-icons{
+  padding: -right: 4vh;
+}

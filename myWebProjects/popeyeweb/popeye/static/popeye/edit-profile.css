@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.53);
+    display: none;
+}
+.head2{
+
+}
+.navbar-inverse{
+    background-color: #3498db;
+    border: none;
+
+}
+#navbar>.navbar-nav>li>a, .navbar-header>.navbar-brand{
+    color: white;
+}
+.logo{
+    font-family: "Lucida Handwriting";
+
+}
+.navbar>nav>li a{
+    color: #ecf0f1;
+}
+.navbar-static-top{
+    margin-bottom: 0;
+}
+.body{
+
+}
+.image-holder{
+    margin:2vh;
+    height: 40vh;
+border-radius: 50%;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.profile-text{
+    position: relative;
+    top: 2vh;
+
+}
+.more-holder{
+    float: right;
+}
+.profile-text>h4{
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+.equalizer{
+    height: 50vh;
+}
+.sidebar {
+}
+.profile-body{
+    height: 40vh;
+}
+.side-div{
+    border: solid;
+}
+.side{
+    height: 50vh;
+    border-radius: inherit;
+    border: solid;
+}
+.side>li{
+    border: none;
+    background-color: inherit;
+}
+.side>li:hover{
+    cursor: pointer;
+}
+.panel-footer{
+    background-color: white;
+    border: none;
+}
+.profbody{
+    display: inline-block;
+    border:none;}
+.details-holder{
+    float: right;
+
+}
+.profile-info{
+    padding: 3vh;
+    height: 20vh;
+}
+
+.options-holder {
+    position: relative;
+    top: 10%;
+    float: none;
+    margin: 0 auto;
+    min-height: 70%;
+}
+.option{
+    height: 30vh;
+    margin: 2vh;
+}
+.other{
+    height: 60vh;
+}
+.hold-form,.webDesign{
+    display: none;
+}
+.ui-dialog {
+    z-index: 3000 !important;
+}
+.ui-dialog-titlebar{
+    background-color: #337ab7;
+    color: white;
+    text-align: center;
+    font-size: larger;
+}
+.blog-footer {
+    margin-top: 2vh;
+    padding: 40px 0;
+    color: #999;
+    text-align: center;
+    background-color: #0f0f0f;
+    border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+    margin-bottom: 0;
+}

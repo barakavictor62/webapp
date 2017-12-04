@@ -1,0 +1,11 @@
+#dynamic-data{
+    display: none;
+}
+.overlay{
+    display: none;
+}
+
+.panel-heading{
+    background-color: dodgerblue;
+    color: white;
+}

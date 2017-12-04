@@ -1,0 +1,76 @@
+{% extends "popeye/base_profile.html" %}
+{% load static %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'popeye/myProfile.css' %}" />
+{% endblock %}
+{% block modal-backdrop %}
+        <div class="overlay modal-backdrop"></div>
+{% endblock %}
+{% block profiledata %}
+    {% if user.is_authenticated %}
+                <h4>{{ user.first_name}} {{ user.last_name }}</h4>
+                <h4>{{ user.email }}</h4>
+                    <h4>{{ user.profile.country }}</h4>
+
+        <a class="btn btn-primary" href="/edit_profile"> Edit Profile</a>
+                {% endif %}
+{% endblock %}
+{% block body %}
+        <div class="row profile-body">
+        <div class="col-lg-12 details-holder">
+            <div class="col-lg-3 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class=""><a href="/home">Home</a></li>
+                    <li class=""><a href="/mywallet">My Wallet</a></li>
+                    <li class=""><a href="/pending"> Pending</a></li>
+                    <li class=""><a href="/done">Done</a></li>
+                    <li class=""><a href="/password/">Change Password</a></li>
+                </ul>
+            </div>
+            <div class=" col-lg-9 profbody well">
+                <div class="other">
+                    <div class="col-lg-10 options-holder ">
+                        <div class="col-lg-5 option">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="inform ">Content writing</h4>
+                                </div>
+                            <div class="panel-body">
+                            <p>Choose this option for content writing and optimization services</p>
+                            </div>
+                            <div class="panel-footer">
+                            <button class="btn btn-primary form-control choose" value="hold-form">Get content</button>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-lg-5 option">
+                            <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="inform">Web development</h4>
+                            </div>
+                            <div class="panel-body">
+                            <p class="lead">Choose this option for web development and design services</p>
+                            </div>
+                            <div class="panel-footer">
+                            <button class="btn btn-primary form-control choose"value="webDesign">Request Website</button>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<div id="content-writing" title="Content writing" class="hold-form">
+<form method="post" >
+    {% csrf_token %}
+    {{ form.as_p }}
+</form>
+    </div>
+<div class="webDesign" title="Web Design" id="website_building">
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form2.as_p }}
+</form>
+</div>
+    {% endblock %}

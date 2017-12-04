@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Popeyeweb</title>
+<meta charset = "utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'popeye/bootstrap-3.3.7/dist/css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'popeye/font-awesome-4.7.0/css/font-awesome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'popeye/jquery-ui-1.12.1/jquery-ui.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'popeye/base.css' %}"/>
+    {% block extra_head %}{% endblock extra_head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+</head>
+<body>
+{%block content %}
+{% endblock content  %}
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAR0D0UCk8XYG583sjV0g__7upWyJC29fI",
+    authDomain: "checkit-eec37.firebaseapp.com",
+    databaseURL: "https://checkit-eec37.firebaseio.com",
+    projectId: "checkit-eec37",
+    storageBucket: "checkit-eec37.appspot.com",
+    messagingSenderId: "759109179437"
+  };
+  firebase.initializeApp(config);
+</script>
+
+    <script  type="text/javascript" src="{% static 'popeye/jquery/dist/jquery.js' %}"></script>
+    <script  type="text/javascript" src="{% static 'popeye/bootstrap-3.3.7/dist/js/bootstrap.js' %}"></script>
+    <script  type="text/javascript" src="{% static 'popeye/jquery-ui-1.12.1/jquery-ui.js' %}"></script>
+    <script  type="text/javascript" src="{% static 'popeye/js/js/logindisplay.js' %}"></script>
+{% block scripts %}
+{% endblock %}
+</html>

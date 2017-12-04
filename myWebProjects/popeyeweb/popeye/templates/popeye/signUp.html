@@ -1,0 +1,82 @@
+{% extends "popeye/base.html" %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'popeye/signup.css' %}" />
+{% endblock extra_head %}
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container contain-nav">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="/ "><h4>Ace  Digital</h4></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+ <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-5 panel-holder">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 >Create Account</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="col-lg-6">
+                                {{ form.first_name.label_tag }}
+                                {{ form.first_name }}
+                            </div>
+                            <div class="col-lg-6">
+                                {{ form.last_name.label_tag }}
+                                {{ form.last_name }}
+                            </div>
+                            <div class="col-lg-12">
+                                {{ form.username.label_tag }}
+                                {{ form.username }}
+                                {{ form.email.label_tag }}
+                                {{ form.email }}
+                                {{ country.country.label_tag }}
+                                {{ country.country }}
+                                {{ form.password1.label_tag }}
+                                {{ form.password1 }}
+                                {{ form.password2.label_tag }}
+                                {{ form.password2 }}
+                                <br>
+                                <button type="submit" class="btn btn-primary form-control">Sign Up</button>
+                                {% if form.errors %}
+                                    {% for fields in form %}
+                                        {{ fields.errors }}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <p>Already Have an Account? <a href="/login">Sign In</a> </p>
+            </div>
+        </div>
+     <div class="row">
+            <footer class="blog-footer">
+                <p><a href="#">Privacy</a> . <a href="#">Terms</a>.</p>
+                <p>
+                <p>&copy; 2016 Ace, Inc.</p>
+                </p>
+            </footer>
+        </div>
+ </div>
+{% endblock content %}
+{% block scripts %}
+        <script type="text/javascript" src="{% static 'popeye/js/js/loginform.js' %}"></script>
+{% endblock %}

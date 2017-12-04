@@ -1,0 +1,90 @@
+{% extends "popeye/base.html" %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'popeye/login.css' %}" />
+{% endblock extra_head %}
+{% block content %}
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container contain-nav">
+            <div class="navbar-header">
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>-->
+            <a class="navbar-brand logo" href="/"><h4>Ace  Digital</h4></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container-fluid">
+        <div class="row" id="login-body">
+        <div class="container">
+            <div class="col-lg-5 panel-holder">
+                <div class="col-lg-10 the-panel ">
+           <!-- <h3>Welcome.</h3>
+            <p class="lead">Fill in your credentials to proceed.</p>-->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3>Sign In</h3>
+                        </div>
+                        <form method="post" action="{% url 'login' %}">
+                            <div class="panel-body">
+                                {% if form.errors %}
+                                    <p class="alert alert-danger">Please check your username and password and try again.</p>
+                                {% endif %}
+                                {% if next %}
+                                    {% if user.is_authenticated %}
+                                        <p  class="alert alert-danger">Your account doesn't have access to this page. To proceed,
+                                            please login with an account that has access.</p>
+                                    {% else %}
+                                        <p  class="alert alert-danger">Please login to see this page.</p>
+                                    {% endif %}
+                                {% endif %}
+                                {% csrf_token %}
+                                <br>
+                                <div class="form-group">
+                                    <div class="input-group margin-bottom-sm inputlg">
+                                        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                        {{ form.username }}
+                                    </div>
+                                    <br>
+                                    <div class="input-group margin-bottom-sm inputlg">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                                        {{ form.password }}</div>
+                                </div>
+                                <!--<input type="checkbox" id="remember-me">
+                                <label for="remember-me">Remember Me</label><br><br>-->
+
+                                <button type="submit" class="form-control btn btn-primary">Submit</button>
+                            <br>
+                            <br>
+                                <a href="/password_reset">Forgot Password?</a>
+                            </div>
+                            <input type="hidden" name="next" value="{{ next }}" />
+                        </form>
+                    </div>
+                <p>Don't Have an Account? <a href="/signup">Sign Up</a> </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <footer class="blog-footer">
+                <p><a href="#">Privacy</a> . <a href="#">Terms</a>.</p>
+                <p>
+                <p>&copy; 2016 Ace, Inc.</p>
+                </p>
+            </footer>
+        </div>
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'popeye/js/js/loginform.js' %}"></script>
+{% endblock scripts  %}

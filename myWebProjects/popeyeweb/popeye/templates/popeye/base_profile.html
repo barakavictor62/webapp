@@ -1,0 +1,70 @@
+{% extends 'popeye/base.html' %}
+{% load static %}
+{% block extra_head %}
+
+{% endblock extra_head %}
+{% block content %}
+    {% block modal-backdrop %}
+        {% endblock %}
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container contain-nav">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"><h4>Ace Digitals</h4></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right nav">
+                <li><a  href="/myProfile"><h4><i class="fa fa-home"></i> Home</h4></a></li>
+                <li><a href="/myProfile"> <h4>Welcome {{ user.username }} </h4></a></li>
+                <li><a href="http://localhost/wordpress"><h4>Messages <i class="fa fa-bell"></i></h4></a></li>
+                <li ><a  href="logout"><h4>Logout <i class="fa fa-sign-out"></i></h4></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container-fluid body">
+    <div class="container">
+        <div class="row head">
+        <div class="col-lg-12 head2">
+            <div class="col-lg-3 image-holder ">
+                {% if user.profile.profile_picture %}
+                <img class=" img-rounded " src="{{ user.profile.profile_picture.url }}">
+                {% endif %}
+             {% if not user.profile.profile_picture %}
+                            <img class=" img-rounded " src="/static/popeye/images/default.png">
+
+            {% endif %}
+            </div>
+            <div class="col-lg-8 profile-text">
+            {% block profiledata %}
+
+                {% endblock %}
+            </div>
+        </div>
+        </div>
+     {% block body %}
+
+    {% endblock %}
+    </div>
+    <div class="row">
+        <footer class="blog-footer">
+            <p><a href="#">Privacy</a> . <a href="#">Terms</a>.</p>
+            <p>
+            <p>&copy; 2016 Ace, Inc.</p>
+        </footer>
+    </div>
+
+    </div>
+{% endblock %}
+{% block scripts %}
+        <script  type="text/javascript" src="{% static 'popeye/js/js/index.js' %}"></script>
+{% endblock %}

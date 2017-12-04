@@ -1,0 +1,180 @@
+{% extends 'popeye/base.html' %}
+{% block content %}
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container contain-nav">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="/ "><h4>Ace  Digital</h4></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="go-gray"><a href="/pricing"><h4>Pricing</h4></a></li>
+                <li class="go-gray"><a href="/articles_request"><h4>Request Content</h4></a></li>
+                <li class="go-gray"><a href="/"><h4>Order a Website</h4></a></li>
+                <li class="go-gray"><a href="http://localhost/wordpress"><h4>Blog</h4></a></li>
+                <li class="go-gray"><a href="/contact" id="contactLink"><h4>Contact Us</h4></a></li>
+
+                <!--<li class="go-gray"><a href="/contact" id="contactLink"><h4>Contact Us</h4></a></li>-->
+                <a href="/login" class="btn btn-primary" id="login-btn"><h4>Sign In</h4></a>
+            </ul>
+        </div>
+    </div>
+</nav>
+ <div class="container-fluid">
+    <div class="row landing" data-spy="affix">
+        <div class="col-lg-12 overlay">
+            <div class="inner-home col-lg-12">
+                <div class="col-lg-6 tag-line">
+                    <h2>Welcome to ACE<br> your ideal solution in web design, content and web optimization</h2>
+                    <p><a class="btn btn-lg btn-primary letsgo" href="/signup" role="button">Create Account. Its Free!!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row after-landing">
+        <div class="col-lg-12 what-we-do do">
+            <div class="container">
+                <div class="col-md-11 service">
+                    <div class="col-md-5 icon-holder">
+                        <img class="img-responsive center-block icon" src="static/popeye/images/typer.jpg">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="service-header">Content Writing</h2>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="row what-we-do what-we-do-pic"></div>-->
+        <div class="col-lg-12 what-we-do">
+            <div class="container">
+                <div class="col-md-11 service">
+                    <div class="col-md-5 icon-holder icon-holder-bottom">
+                        <img class="img-responsive center-block icon" src="static/popeye/images/images.png">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="service-header">Web Development</h2>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p>
+                    </div>
+                    <div class="col-md-5 icon-holder icon-holder-top">
+                        <img class="img-responsive center-block icon" src="static/popeye/images/images.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="row what-we-do what-we-do-pic"></div>-->
+        <div class="col-lg-12 what-we-do">
+            <div class="container" >
+                <div class="col-md-11 service" >
+                    <div class="col-md-5 icon-holder">
+                        <img class="img-responsive center-block icon" src="static/popeye/images/seo.jpg">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="service-header">Search Engine Optimization</h2>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 what-we-do">
+            <div class="container" >
+                <div class="col-md-11 service" >
+                    <div class="col-lg-7">
+                        <h2 class="service-header">Web Optimization</h2>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        </p>
+                    </div>
+                    <div class="col-md-5 icon-holder">
+                        <img class="img-responsive center-block icon" src="static/popeye/images/seo.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row what-we-do what-we-do-pic"></div>-->
+        <div class="col-lg-12 what-we-do " id="what-we-do-last">
+            <div class="container">
+              <div class="col-md-11 service">
+            <div class="col-lg-4 person">
+              <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              <h4>Heading</h4>
+              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 person">
+              <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              <h4>Heading</h4>
+              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. </p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 person">
+              <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+              <h4>Heading</h4>
+              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id </p>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+        </div>
+        </div>
+ <div class="col-lg-12 footer">
+        <div class="container">
+            <div class="col-lg-4 box">
+                <h4>Ace</h4>
+                <p class="about"><em>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. </em></p>
+                <a href=""><i class="fa fa-facebook fa-2x social-icons"></i></a>
+                <a href=""><i class="fa fa-twitter fa-2x social-icons"></i></a>
+                <a href=""><i class="fa fa-google-plus fa-2x social-icons"></i></a>
+            </div>
+            <div class="col-lg-4 box mid">
+                <h4>Contacts</h4>
+                <ul class="mid-footer-ul">
+                    <li><h5><i class="fa fa-inbox"></i>  ace@gmail.com</h5></li>
+                    <li><h5><i class="fa fa-phone-square"></i>  0717260641</h5></li>
+                    <li><h5><i class="fa fa-envelope"></i>  P.O.Box: 00100-27012</h5></li>
+                    <li><h5><i class="fa fa-globe"></i>  Nairobi</h5></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 box box-last">
+                <h4>Links</h4>
+                <!--<a href=""><i class="fa fa-cc-paypal fa-3x pay-icons"></i></a>
+                <a href=""><i class="fa fa-cc-mastercard fa-3x pay-icons"></i></a>
+                <a href=""><i class="fa fa-credit-card fa-3x pay-icons"></i></a>
+                <a href=""><i class="fa fa-cc-visa fa-3x pay-icons"></i></a>-->
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Order Content</a></li>
+                    <li><a href="">Order Website</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Create Account</a></li>
+                </ul>
+            </div>
+        </div>
+    <div class="col-lg-12">
+       <footer class="blog-footer">
+      <p class=""><a href="#">Privacy</a> . <a href="#">Terms</a>.</p>
+      <p>
+        <p class="">&copy; 2016 Ace, Inc.</p>
+    </footer>
+    </div>
+    </div>
+ </div>
+ </div>
+{% endblock content %}

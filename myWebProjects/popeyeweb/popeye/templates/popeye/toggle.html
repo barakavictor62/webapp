@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Off Canvas Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'popeye/toggle.css' %}" rel="stylesheet">
+    <link href="{% static 'popeye/bootstrap-3.3.7/dist/css/bootstrap.css' %}" rel="stylesheet">
+
+
+
+  </head>
+
+  <body>
+
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li><a href="" >link</a></li>
+            <li><a href="" >link</a></li>
+            <li><a href="" >link</a></li>
+        </ul>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href=" " class="btn btn-success" id="menu-toggle">Toggle Menu</a>
+                    <h1>Side bar layouts are cool</h1>
+                    <div class="col-lg-3 image-holder" id="image-holder">
+                    {% if user.profile.profile_picture %}
+                        <img class=" img-rounded " src="{{ user.profile.profile_picture.url }}">
+                    {% endif %}
+                    {% if not user.profile.profile_picture %}
+                        <img class=" img-rounded " src="/static/popeye/images/default.png">
+                    {% endif %}
+                </div>
+            <div class="col-lg-8 profile-text">
+                {% if user.is_authenticated %}
+                    <h3>{{ user.first_name}} {{ user.last_name }}</h3>
+                    <h4>{{ user.email }}</h4>
+                    <h4>{{ user.profile.country }}</h4>
+                {% endif %}
+            </div>
+                </div>
+             <div class="col-lg-6 panel-holder">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Forgot password</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Forgotten your password? Enter you email address below and we will send you instructions to reset your password</p>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.email }}
+                            <br>
+                            <button type="submit" class="btn btn-primary form-control">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div><!--/.container-->
+    </div>
+</div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script  type="text/javascript" src="{% static 'popeye/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'popeye/bootstrap-3.3.7/dist/js/bootstrap.js' %}"></script>
+    <script src="{% static 'popeye/js/js/toggle.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'popeye/base_profile.html' %}
+{% load static %}
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'popeye/edit-profile.css' %}" />
+{% endblock %}
+{% block profiledata %}
+    <div class="col-lg-10">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form method="post" action="{% url 'edit_profile' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {{ form2.as_p}}
+                <button type="submit" class="btn btn-primary form-control">Save</button>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+{% block body %}
+{% endblock %}

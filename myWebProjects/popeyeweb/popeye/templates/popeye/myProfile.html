@@ -1,0 +1,84 @@
+{% extends 'popeye/test.html' %}
+
+
+{% block profiledata %}
+    <div class="col-lg-3 image-holder" id="image-holder">
+                    {% if user.profile.profile_picture %}
+                        <img class=" img-rounded " src="{{ user.profile.profile_picture.url }}">
+                    {% endif %}
+                    {% if not user.profile.profile_picture %}
+                        <img class=" img-rounded " src="/static/popeye/images/default.png">
+                    {% endif %}
+                </div>
+            <div class="col-lg-8 profile-text">
+                {% if user.is_authenticated %}
+                    <h3>{{ user.first_name}} {{ user.last_name }}</h3>
+                    <h4>{{ user.email }}</h4>
+                    <h4>{{ user.profile.country }}</h4>
+                    <button type="button" class="btn btn-success">Add Bio</button>
+                {% endif %}
+            </div>
+{% endblock %}
+{% block dynamicdata %}
+            <div class=" col-lg-12 profbody well">
+                <ul class="nav nav-tabs">
+                    <li class="active mytab" id="my-articles"><a>My Articles</a></li>
+                    <li class="mytab" id="pending"><a>Pending Articles</a></li>
+                    <li class="mytab" id="done"><a>Web Jobs</a></li>
+                </ul>
+            <br>
+            <div class="held">
+            <div class="my-articles">
+                {% for article in articles %}
+                    <div class="col-lg-3 ">
+                    <div class="panel panel-default article-holder">
+                        <div class="panel-heading">
+                            <i class="fa fa-file-text"></i> {{ article.title }}
+                        </div>
+                    <div class="panel-body description">
+                        <p>{{ article.description }}</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/article/{{ article.id }}">Preview</a>
+                    </div>
+                    </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="pending">
+                {% for pending in pending %}
+                    <div class="col-lg-3 ">
+                    <div class="panel panel-default article-holder">
+                        <div class="panel-heading">
+                            <i class="fa fa-file-text"></i> {{ pending.title }}
+                        </div>
+                    <div class="panel-body description">
+                        <p>{{ pending.description }}</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/article/{{ pending.id }}">Details</a>
+                    </div>
+                    </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="done">
+                {% for web in websites %}
+                    <div class="col-lg-3 ">
+                    <div class="panel panel-default article-holder">
+                        <div class="panel-heading">
+                            <i class="fa fa-code"></i> {{ web.title }}
+                        </div>
+                    <div class="panel-body description">
+                        <p>{{ web.description }}</p>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/web/{{ web.id }}">url</a>
+                    </div>
+                    </div>
+                    </div>
+                {% endfor %}
+            </div>
+            </div>
+            </div>
+{% endblock %}

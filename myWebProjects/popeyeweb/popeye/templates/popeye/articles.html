@@ -1,0 +1,21 @@
+{% extends 'popeye/test.html' %}
+{% block profiledata %}
+
+    <div class="col-lg-9 article-panel-holder">
+            <form method="post" action="{% url 'articles' %}">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>Post an Article Request</h4>
+                </div>
+                <div class="panel-body">
+                    {%if form.errors %}
+                    {{ form.errors }}
+                    {% endif %}
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary pull-right">Post <i class="fa fa-send"></i></button>
+                </div>
+                </div>
+            </form>
+    </div>
+{% endblock profiledata %}
